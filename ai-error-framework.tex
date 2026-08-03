@@ -1,0 +1,52 @@
+\documentclass[11pt,a4paper]{article}
+
+% Encoding and fonts
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+% Layout
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip}
+
+% Typography helpers
+\usepackage{microtype}
+\usepackage{textcomp}
+
+% Tables and lists
+\usepackage{array}
+\usepackage{enumitem}
+\setlist{itemsep=0.35em, topsep=0.5em}
+
+% Links (no coloured boxes)
+\usepackage[hidelinks]{hyperref}
+
+% Title
+\title{Sources of Error in AI Workflows: A Working Framework}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\input{sections/00-front-matter}
+\input{sections/01-part-one-two-layers-of-vendor-and-why-the-distinction-matters}
+\input{sections/02-part-two}
+\input{sections/02a-continuation-after-part-two}
+\input{sections/03-part-three-define-the-job-before-decomposing-the-tool}
+\input{sections/04-part-four-a-proposed-lens-five-functions-an-ai-tool-can-perform}
+\input{sections/05-part-five-confidentiality-travels-along-the-path-not-the-box}
+\input{sections/06-part-six-agentic-containment-why-instructions-are-not-a-boundary}
+\input{sections/07-part-seven-what-the-five-functions-hide-specification-difficulty-and-verification-strength}
+\input{sections/08-part-eight-model-convergence-and-the-limits-of-self-arbitration}
+\input{sections/09-part-nine-a-diagnostic-ladder-for-a-single-wrong-output}
+\input{sections/10-part-ten-the-threads-that-tie-everything-together}
+\input{sections/11-part-eleven-from-error-to-hazard}
+\input{sections/12-part-twelve-the-topology-of-error-propagation}
+\input{sections/13-part-thirteen-verification-as-an-assurance-argument}
+\input{sections/14-part-fourteen-operational-resilience-and-learning}
+\input{sections/15-part-fifteen-open-questions-and-contested-points}
+
+\end{document}
