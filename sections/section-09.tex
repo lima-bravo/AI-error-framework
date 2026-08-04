@@ -1,5 +1,9 @@
 \section{A Diagnostic Ladder for a Single Wrong Output}
 
+\textbf{Why this matters:} "The AI hallucinated" is a diagnosis that goes nowhere. The same wrong output can be a formatting problem, a missing instruction, an unverified fact, or a question nobody actually specified --- and each needs a completely different fix.
+
+\textbf{Practical implication:} When an output is wrong, work through structure, meaning, context, groundedness, and environment in that order before concluding the model itself is the problem. The fix is often cheaper and more specific than it first appears.
+
 The prior sections decompose a \emph{tool} or a \emph{task}. A complementary decomposition applies to a single \emph{output} --- the moment something a system produced is simply wrong, and the people involved need a precise, shared vocabulary for what kind of wrong it is.
 
 \textbf{The five axes, ordered from most mechanical to most human:} structure, meaning, context, groundedness, environment.

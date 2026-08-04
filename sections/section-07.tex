@@ -1,5 +1,9 @@
 \section{What the Five Functions Hide: Specification Difficulty and Verification Strength}
 
+\textbf{Why this matters:} Some tasks are merely hard to check; others are structurally resistant to being made more certain no matter how much expert scrutiny is applied. Mistaking the second for the first produces a rigorously reviewed wrong answer, not a better one.
+
+\textbf{Practical implication:} Before asking how to verify something, ask what kind of problem it actually is --- a knowable one that rewards more analysis, or one where the right answer only becomes visible in hindsight, which calls for small, reversible tests instead.
+
 The five-function lens describes \emph{what} a system does without surfacing \emph{what makes each function hard}. Two variables, hidden inside that view, drive how much autonomy a system can safely be given.
 
 \textbf{The first is specification difficulty}, inside context assembly. This sits on a gradient: \textbf{Formal} (fully specifiable in structured form --- an API schema, a complete checklist); \textbf{Expert-articulable} (a domain expert can explain the requirement, but doing so takes real professional knowledge, and a non-expert can't assess whether the specification is complete); \textbf{Tacit} (the expert "knows it when they see it" but can't fully pre-specify it --- strategic judgment, reading a counterparty).

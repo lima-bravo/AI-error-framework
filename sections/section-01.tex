@@ -1,5 +1,9 @@
 \section{Two Layers of Vendor, and Why the Distinction Matters}
 
+\textbf{Why this matters:} A tooling vendor's product inherits the underlying model's limitations and can only ever add mitigations on top of them. Confusing the two hides who is actually capable of fixing a given failure --- and who is not.
+
+\textbf{Practical implication:} When something goes wrong, ask first whether the vendor's own product architecture caused it, or whether it's a limitation of the underlying model that no amount of that vendor's engineering will fix.
+
 Before anything else can be reasoned about clearly, one terminological confusion needs resolving, because it silently collapses two different claims into one word.
 
 \textbf{Model vendors} --- Anthropic, OpenAI, Google, DeepSeek, and similar organizations --- build large language models and their native harnesses: the decoding stack, safety training, tool-use format, default scaffolding (reasoning traces, and so on).

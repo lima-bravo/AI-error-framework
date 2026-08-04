@@ -1,5 +1,9 @@
 \section{Purpose and Standard of Success}
 
+\textbf{Why this matters:} Without a stated standard, "does this work" has no answer, and a system ends up judged against whatever comparator is convenient --- usually an overworked person, which makes almost anything look like an improvement.
+
+\textbf{Practical implication:} Before evaluating a tool, agree explicitly on what a strong human comparator actually achieves, and require tail risks to be controlled separately from the average. A good average with an unacceptable tail is not a pass.
+
 Everything from here forward is a catalogue of what can go wrong, why verification is hard, how errors propagate, and what an organization needs in place to catch and contain them. Read on its own, that catalogue can look like an argument for never deploying anything --- a wall of failure modes with no stated finish line. That reading would be a mistake, and it's worth stating plainly what this framework is actually for.
 
 \textbf{The purpose is not to demand an error-free system.} No human process and no technical system offers perfect availability, complete information, or uniformly correct performance under every possible condition --- that standard has never been met by anything, including the all-human processes AI is being compared against, and holding AI to it uniquely would block useful deployment without producing any real gain in safety. The right question is never \emph{"can this workflow produce an error"} --- every useful system can --- but rather: \textbf{under a defined range of operating conditions, does the complete human-AI workflow produce fewer and less consequential errors than a well-rested, properly trained human performing the same work, while also improving speed, capacity, or cost?}

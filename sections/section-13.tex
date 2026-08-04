@@ -1,5 +1,9 @@
 \section{Verification as an Assurance Argument}
 
+\textbf{Why this matters:} "Verified" is not a single property. A check can be excellent at catching one kind of failure and have zero coverage of another, so a system can pass every check that was actually run while still missing the one that mattered.
+
+\textbf{Practical implication:} For any safeguard a vendor or team points to, ask what specific failure it targets, what it doesn't cover, and how independent it is from whatever it's checking --- not just whether it exists.
+
 Sections 4 and 7 already establish that verification is not a single binary property and that "Oracle strength" varies by task. This section makes that idea fully operational: for any specific check, "verified" is an incomplete sentence until it answers \textbf{verified against what, for which failure mode, with what coverage and independence, and under what conditions?}
 
 Six properties are worth recording for any verification mechanism actually in use:

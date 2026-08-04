@@ -1,5 +1,9 @@
 \section{The Topology of Error Propagation}
 
+\textbf{Why this matters:} An error can become materially more dangerous after it leaves the component that created it. Testing individual components does not establish that the workflow as a whole is safe.
+
+\textbf{Practical implication:} Identify which outputs are reused, copied, acted upon, or incorporated into organizational knowledge, and ask whether their provenance and uncertainty survive those transitions, or get silently stripped away.
+
 The five functions from Section 4 describe what happens \emph{at} a step. They say very little about what happens \emph{between} steps --- and error propagation is fundamentally a between-steps phenomenon. This section treats a workflow as an explicit \textbf{graph of state transformations}, not a pipeline, because a pipeline model quietly assumes information moves cleanly from one stage to the next, and that assumption is exactly where propagation failures hide.
 
 Each edge in that graph carries more than content. Alongside whatever substantive material is being passed along, an edge can carry --- or fail to carry --- evidence, provenance, permissions, uncertainty, assumptions, authority, timestamps, and scope conditions. A genuinely distinct and easy-to-miss form of propagation failure follows directly from this: \textbf{a workflow edge may transmit content correctly while corrupting its provenance, uncertainty, permissions, or scope.} The words that reach the next step can be exactly right while everything \emph{about} those words that a downstream consumer would need to evaluate them properly --- where they came from, how confident anyone should be, who's allowed to see them, what they don't cover --- is silently lost or altered.

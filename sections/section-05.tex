@@ -1,5 +1,9 @@
 \section{Confidentiality Travels Along the Path, Not the Box}
 
+\textbf{Why this matters:} Sensitive information doesn't stay contained to the step that first touched it --- it travels through logs, caches, and indexes that a firm's existing permission structure was never built to reach.
+
+\textbf{Practical implication:} Ask not whether a vendor isolates your data from other customers, but whether your own internal matter barriers are preserved everywhere the data and its derivatives actually go.
+
 \textbf{The core realization: sensitivity is a property of the path data takes through a system, not a property of any single step.} Once sensitive data enters context assembly, everything downstream inherits its sensitivity --- the model reading it, any memory holding it, any hidden model grading the output, the logs, the step that acts. There's no way to designate one component "the secure part" and relax about the rest, because the data flows between all of them. The useful image is a secure room: once a confidential file is on the table, everything on the table is confidential until someone deliberately produces a clean, reviewed version to carry out.
 
 A small or narrow-looking output is not automatically safe. A bare "PASS/FAIL" can still disclose that a particular condition exists, betray a party's position, or let an observer infer privileged analysis by watching which inputs produce which verdicts over time. Output shape doesn't determine sensitivity --- what it reveals, including by inference, does.

@@ -1,5 +1,9 @@
 \section{Synthesis: The Threads That Tie Everything Together}
 
+\textbf{Why this matters:} Several worries that seem independent --- miscalibrated confidence, silent failure, defeated boundaries, propagating errors, reviewer fatigue --- are actually the same handful of patterns recurring. Treating them as unrelated means solving each in isolation without addressing the shared cause.
+
+\textbf{Practical implication:} When a new failure shows up, check whether it's genuinely new or a familiar pattern from an earlier section reappearing in a different part of the workflow.
+
 \textbf{The verification-cost idea appears at every level of this framework, from three independent angles.} The defensible version: expressed model confidence correlates with accuracy above chance, is frequently miscalibrated, and should not be relied upon for triage except where independently validated for the specific model, task, and deployment --- which in practice, absent that validation work, means treating consequential claims as hypotheses to check regardless of how confidently they're stated.
 
 \textbf{Silent, confident failure under distribution shift} is a real and recurring pattern across the framework --- narrow models can fail outside their trained distribution without an internal signal that they've left familiar territory, and the "fluent output, no feedback signal" region of the task space describes systems that look automatable precisely because nothing about their operation looks broken from outside. No single layer --- model choice, tooling architecture, or process design --- resolves this alone.

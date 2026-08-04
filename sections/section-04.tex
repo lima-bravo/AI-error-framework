@@ -1,5 +1,9 @@
 \section{The Five Functions of an AI-Enabled Workflow}
 
+\textbf{Why this matters:} Different parts of an AI-enabled tool fail in different, characteristic ways. A system can be excellent at the functions that are easy to demo --- retrieval, action --- while being weak exactly where it's hard to demo: verification and control.
+
+\textbf{Practical implication:} When a vendor's pitch is heavy on what the tool retrieves and does, and light on how it checks itself, treat that imbalance as the signal it is, not a gap to fill in with trust.
+
 Watch what any AI tool actually does with a request, and it's typically some blend of five functions. This is a proposed functional lens for evaluating model-mediated applications, useful because it isolates characteristic failure modes --- not a complete or universally applicable taxonomy. Some products do no retrieval, no verification, and take no action at all; others contain training pipelines, memory systems, ranking algorithms, or deterministic computation that don't map neatly onto any one of the five. Real systems are graphs, with parallel paths and blended steps, not a tidy pipeline. Treat what follows as a lens to apply where it fits, not a checklist every system must satisfy.
 
 \textbf{1. Context assembly.} Something decides what information goes in front of the model --- retrieval, memory, prompt construction. This fails \emph{quietly}: missing the one relevant clause produces a confident answer on an incomplete picture, with no visible sign anything went wrong. Much of this step is itself statistical (search, embeddings, reranking), so "gathered context" is a weaker claim than "gathered the \emph{right} context."
