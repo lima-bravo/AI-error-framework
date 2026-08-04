@@ -1,3 +1,33 @@
-\section*{How to Read This Report}
+\section*{Executive Guide}
 
-Not every claim here carries the same evidentiary weight, and being explicit about that distinction matters more than it would in an ordinary memo, because this framework mixes established engineering practice with genuinely contested proposals. Statements below fall into five rough categories: \textbf{definitions} (a terminological choice adopted for clarity --- not true or false, just useful or not); \textbf{framework propositions} (an analytical lens this report proposes --- useful if it clarifies thinking, not established by citation); \textbf{mechanistic claims} (how a system actually works, e.g. next-token training objectives --- as solid as anything in this report gets); \textbf{empirical claims} (a measured finding --- these date quickly, vary by benchmark and methodology, and should be treated as illustrative rather than current fact unless independently re-verified at the time of use); and \textbf{normative or legal claims} (a recommended posture or a jurisdiction-specific proposition --- never a substitute for professional legal advice). Where the category isn't obvious from context, the text says so directly.
+This is a genuinely complex topic, and this guide doesn't simplify it --- it maps it, so a busy reader can decide where to spend attention rather than skipping at random. Every section that follows earns its place by preventing one specific, costly misdiagnosis. The table below names each one, so the complexity reads as deliberate rather than accumulated.
+
+\textbf{The standard this report argues for, in one sentence:} an AI-enabled workflow should be adopted when it is demonstrably more reliable than a strong, well-resourced human process --- not when it is error-free, which nothing ever is, and not when it merely outperforms an overworked or undertrained comparator, which is a low bar dressed up as a high one.
+
+\textbf{Why the complexity is load-bearing rather than decorative.} "Use AI carefully and review the output" is true and useless --- it gives a partner no way to tell a five-minute prompt fix apart from a governance failure that should stop a deployment outright. Each distinction this report insists on exists to prevent one specific version of that confusion. A few examples, expanded on below: knowing whether a failure belongs to the model vendor or the tooling vendor determines who can actually fix it. Knowing whether a task is merely hard to check or structurally resistant to more checking (Section 7) determines whether "get a better reviewer" is even the right instinct. Knowing whether an error was caught by a control or defeated a boundary (Section 6) determines whether the fix is a better prompt or a different piece of infrastructure entirely.
+
+\begin{center}
+\begin{tabular}{|p{0.16\textwidth}|p{0.08\textwidth}|>{\small\raggedright\arraybackslash}p{0.28\textwidth}|>{\small\raggedright\arraybackslash}p{0.36\textwidth}|}
+\hline
+Movement & Sections & The question it answers & What skipping it costs \\
+\hline
+\textbf{Foundations} & 1--3 & What exactly is being evaluated, for whom, and against what standard? & Disputes about whether a tool "works" that never resolve, because no one defined who's accountable, what job it's actually doing, or what "works" was supposed to mean. \\
+\hline
+\textbf{System \& domain decomposition} & 4--7 & How does the tool actually produce its answers, and how hard is this specific task to get right? & Treating every AI failure as the same kind of failure --- and applying more scrutiny to a problem that scrutiny structurally can't fix. \\
+\hline
+\textbf{Reality check} & 8 & What does current market and technical reality actually support, apart from vendor claims? & Decisions anchored to marketing language or to a capability snapshot that's already stale by the time it's acted on. \\
+\hline
+\textbf{Output diagnosis \& synthesis} & 9--10 & When one specific output is wrong, what precise kind of wrong is it, and which fix actually applies? & "The AI hallucinated" as an unfalsifiable diagnosis that goes nowhere, when the real fix might be one line of missing context, not a new model. \\
+\hline
+\textbf{Organizational view} & 11--14 & What happens after the output leaves the tool --- how does a small, correct-looking mistake become an actual client-facing loss, and how would the firm even know? & Mistaking a vendor's own testing for organizational assurance, and missing that the firm's own records, habits, and reliance patterns are where risk actually compounds. \\
+\hline
+\textbf{Coda} & 15 & What does this framework not yet resolve? & False confidence --- treating a working framework as a finished, closed system rather than a tool with real, named open edges. \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{If only a single sitting is available:} Sections 2, 3, and 11 carry the decision framework itself --- the standard, the job, and the hazards. Sections 4 through 10 and 12 through 14 build and pressure-test that framework; they're not filler, but they're the part to return to before relying on a specific deployment decision, not before understanding the shape of the argument.
+
+\textbf{On Section 15 specifically:} a report that ends with fourteen unresolved questions can read as unfinished. It's the opposite --- most frameworks that claim to have no open edges are hiding them rather than lacking them. Naming what this one doesn't yet settle is what makes the rest of it usable with appropriate confidence rather than false confidence.
+
+\textbf{A note on where the material in each section actually comes from.} Some of what follows is established engineering, security, and decision-science practice, applied to this domain for the first time in this specific combination; some of it is built from scratch because nothing off-the-shelf addresses evaluating AI-enabled professional work specifically. The text is explicit, section by section, about which is which --- worth knowing as a general orientation, because the two kinds of claim warrant different kinds of scrutiny from a reader.
